@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="description" content="Professional Portfolio - Showcasing my work and skills">
+    <title>Portfolio | Shannu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Matrix Background Canvas -->
+    <canvas id="matrixCanvas" class="matrix-bg"></canvas>
+    
+    <!-- CRT Noise Overlay -->
+    <div class="crt-overlay"></div>
+    <div class="scanlines"></div>
+    
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="terminal-loader">
+            <div class="loader-text">
+                <span class="prompt">shannu@portfolio:~$</span> <span class="typing-loader"></span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#home" class="glitch" data-text="Shanmukha">Shanmukha</a>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="terminal-prefix">shannu@portfolio:~$</div>
+                <div class="hero-background-text">
+                    <span class="bg-text-white">Hi</span> <span class="bg-text-blue">I'm Shanmukha</span>
+                </div>
+                <h1 class="hero-title glitch-title" data-text="Hi, I'm Shanmukha">
+                    Hi, I'm <span class="neon-text glitch" data-text="Shanmukha">Shanmukha</span>
+                </h1>
+                <p class="hero-subtitle terminal-text">
+                    <span class="prompt-symbol">&gt;</span> <span class="typed-text"></span>
+                    <span class="cursor">&nbsp;</span>
+                </p>
+                <p class="hero-description cyber-text">
+                    <span class="bracket">[</span> Cybersecurity Analyst | Penetration Tester | SOC Analyst <span class="bracket">]</span>
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary neon-btn">
+                        <span class="btn-text">View My Work</span>
+                        <span class="btn-glitch" data-text="View My Work">View My Work</span>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary neon-btn-alt">
+                        <span class="btn-text">Get In Touch</span>
+                        <span class="btn-glitch" data-text="Get In Touch">Get In Touch</span>
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Shannu116" class="social-link neon-icon" aria-label="GitHub" data-hover="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/shanmukha-perla-58216a2b6" class="social-link neon-icon" aria-label="LinkedIn" data-hover="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://tryhackme.com/p/R00tH4sh1r4" class="social-link neon-icon" aria-label="TryHackMe" data-hover="TryHackMe" target="_blank"><i class="fas fa-flag"></i></a>
+                    <a href="mailto:shanmukhaperla@gmail.com" class="social-link neon-icon" aria-label="Email" data-hover="Email" target="_blank"><i class="fas fa-envelope"></i></a>
+                    <a href="shannu_resume.pdf" class="social-link neon-icon" aria-label="Resume" target="_blank" data-hover="Resume"><i class="fas fa-file-pdf"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="terminal-header">
+                <span class="prompt">shannu@portfolio:~$</span> cat about.txt
+            </div>
+            <h2 class="section-title">about me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="profile_pic.png" alt="Profile Picture">
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3 class="cyber-heading"><span class="bracket">[</span> Hello! I'm Shanmukha Perla <span class="bracket">]</span></h3>
+                    <p>
+                        I'm a Cybersecurity enthusiast currently pursuing B.Tech in Cybersecurity at Kalasalingam Academy of Research and Education. 
+                        With hands-on experience in penetration testing, SIEM implementation, and network security, I specialize in identifying 
+                        and mitigating security vulnerabilities.
+                    </p>
+                    <p>
+                        My expertise includes building SOC home labs, conducting web application security assessments, and working with tools 
+                        like Snort IDS, Wireshark, Wazuh SIEM, and the Elastic Stack. I'm passionate about defensive and offensive security practices.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat cyber-card">
+                            <h4 class="neon-number">3+</h4>
+                            <p class="stat-label"><span class="bracket">//</span> Security Projects</p>
+                        </div>
+                        <div class="stat cyber-card">
+                            <h4 class="neon-number">2+</h4>
+                            <p class="stat-label"><span class="bracket">//</span> Certifications</p>
+                        </div>
+                        <div class="stat cyber-card">
+                            <h4 class="neon-number">7.65</h4>
+                            <p class="stat-label"><span class="bracket">//</span> CGPA</p>
+                        </div>
+                    </div>
+                    
+                    <!-- TryHackMe Badge -->
+                    <div class="tryhackme-badge-section">
+                        <h4 class="badge-title"><span class="bracket">//</span> TryHackMe Rank</h4>
+                        <div class="badge-container">
+                            <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=2305330" frameborder="0" style="width: 100%; height: 150px; border: none;"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="terminal-header">
+                <span class="prompt">shannu@portfolio:~$</span> ls -la skills/
+            </div>
+            <h2 class="section-title">skills & technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Security Tools</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Snort IDS</span>
+                        <span class="skill-tag">Wazuh SIEM</span>
+                        <span class="skill-tag">Wireshark</span>
+                        <span class="skill-tag">OpenCTI</span>
+                        <span class="skill-tag">YARA</span>
+                        <span class="skill-tag">Elastic Stack</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Programming</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Bash</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">OOP</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">Flask</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Networking</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Switching</span>
+                        <span class="skill-tag">Routing</span>
+                        <span class="skill-tag">Subnetting</span>
+                        <span class="skill-tag">Cisco IOS</span>
+                        <span class="skill-tag">Packet Tracer</span>
+                        <span class="skill-tag">TCP/IP</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fab fa-linux"></i>
+                    </div>
+                    <h3>Operating Systems</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Kali Linux</span>
+                        <span class="skill-tag">Ubuntu</span>
+                        <span class="skill-tag">Arch Linux</span>
+                        <span class="skill-tag">Fedora</span>
+                        <span class="skill-tag">Windows</span>
+                        <span class="skill-tag">CLI Expert</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="terminal-header">
+                <span class="prompt">shannu@portfolio:~$</span> cd projects/ && ls
+            </div>
+            <h2 class="section-title">featured projects</h2>
+            <div class="projects-grid">
+                <div class="project-card cyber-card glitch-card">
+                    <div class="project-image">
+                        <img src="keylogger.png" alt="Simple Keylogger Project">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Shannu116/Simple-Keylogger" target="_blank" class="project-link" title="View on GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Simple Keylogger</h3>
+                        <p>Python-based keylogger using pynput library for educational purposes. Modular design with real-time keystroke capture and periodic logging with error handling.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Pynput</span>
+                            <span>Logging</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card cyber-card glitch-card">
+                    <div class="project-image">
+                        <img src="Soc_home_lab.png" alt="SOC Home Lab Simulation Project">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Shannu116/SOC-Home-Lab" target="_blank" class="project-link" title="View on GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>SOC Home Lab Simulation</h3>
+                        <p>Multi-OS Security Operations Center lab with Ubuntu, Kali, Win 10, and Metasploitable2. Configured Elastic SIEM Stack and Snort IDS with custom rules for threat detection.</p>
+                        <div class="project-tags">
+                            <span>Elastic SIEM</span>
+                            <span>Snort IDS</span>
+                            <span>Wireshark</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card cyber-card glitch-card">
+                    <div class="project-image">
+                        <img src="owasp.png" alt="OWASP Top 10 Security Assessment Project">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Shannu116" target="_blank" class="project-link" title="View on GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>OWASP Top 10 Security Assessment</h3>
+                        <p>Comprehensive web application penetration testing focusing on OWASP Top 10 vulnerabilities. Successfully completed security walkthrough of OWASP Juice Shop platform.</p>
+                        <div class="project-tags">
+                            <span>OWASP</span>
+                            <span>Pen Testing</span>
+                            <span>SQLi/XSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card cyber-card glitch-card">
+                    <div class="project-image">
+                        <img src="network_security_analysis.png" alt="Network Security Analysis Project">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Shannu116" target="_blank" class="project-link" title="View on GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Network Security Analysis</h3>
+                        <p>Conducted simulated web attacks against DVWA and performed forensic network analysis using Wireshark to monitor traffic and validate IDS alerts.</p>
+                        <div class="project-tags">
+                            <span>Wireshark</span>
+                            <span>DVWA</span>
+                            <span>IDS Rules</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <div class="terminal-header">
+                <span class="prompt">shannu@portfolio:~$</span> cat certifications.txt
+            </div>
+            <h2 class="section-title">certifications</h2>
+            <div class="certifications-grid">
+                <div class="cert-card cyber-card">
+                    <div class="cert-badge">
+                        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="48e51a71-23f4-4623-a71d-46e10d18dee9" data-share-badge-host="https://www.credly.com"></div>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Google Cybersecurity Professional Certificate</h3>
+                        <p class="cert-issuer"><i class="fas fa-graduation-cap"></i> Google / Coursera</p>
+                        <p class="cert-description">Comprehensive professional certification covering security frameworks, threat analysis, incident response, and security operations.</p>
+                        <div class="cert-skills">
+                            <span>Security Frameworks</span>
+                            <span>SIEM</span>
+                            <span>Incident Response</span>
+                            <span>Threat Analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-card cyber-card">
+                    <div class="cert-badge">
+                        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="7e2e8f3f-b3f4-44f8-bc0f-27575698b9c6" data-share-badge-host="https://www.credly.com"></div>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Cisco Network Configuration</h3>
+                        <p class="cert-issuer"><i class="fas fa-graduation-cap"></i> Cisco Networking Academy</p>
+                        <p class="cert-description">Certified in Cisco Networking Devices and Initial Configuration. Expertise in routing, switching, and network device management.</p>
+                        <div class="cert-skills">
+                            <span>Cisco IOS</span>
+                            <span>Routing</span>
+                            <span>Switching</span>
+                            <span>Network Security</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="terminal-header">
+                <span class="prompt">shannu@portfolio:~$</span> nano contact.txt
+            </div>
+            <h2 class="section-title">get in touch</h2>
+            <div class="contact-content-centered">
+                <div class="contact-info-full">
+                    <h3>Let's Connect!</h3>
+                    <p>Feel free to reach out through any of the following channels. I'm always open to discussing new opportunities, collaborations, or just having a chat about cybersecurity.</p>
+                    
+                    <div class="contact-grid">
+                        <a href="mailto:shanmukhaperla@gmail.com" class="contact-card cyber-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h4>Email</h4>
+                            <p>shanmukhaperla@gmail.com</p>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/in/shanmukha-perla-58216a2b6" target="_blank" class="contact-card cyber-card">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <h4>LinkedIn</h4>
+                            <p>Shanmukha Perla</p>
+                        </a>
+                        
+                        <a href="https://github.com/Shannu116" target="_blank" class="contact-card cyber-card">
+                            <div class="contact-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <h4>GitHub</h4>
+                            <p>@Shannu116</p>
+                        </a>
+                        
+                        <a href="tel:+919346168656" class="contact-card cyber-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h4>Phone</h4>
+                            <p>+91 93461 68656</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="terminal-text"><span class="bracket">[</span> &copy; 2025 Shanmukha Perla. All rights reserved. <span class="bracket">]</span></p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="matrix.js"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+</body>
+</html>
