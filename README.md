@@ -10,7 +10,7 @@ A cutting-edge cyberpunk-themed portfolio website featuring Matrix rain animatio
 
 ## 🌟 Live Demo
 
-Visit the live portfolio: [Your GitHub Pages URL]
+Visit the live portfolio: [https://shannu116.github.io/portfolio/](https://shannu116.github.io/portfolio/)
 
 ## 📸 Preview
 
@@ -110,8 +110,9 @@ git branch -M main
 git remote add origin https://github.com/YOUR_USERNAME/portfolio.git
 git push -u origin main
 ```
-3. Go to Settings → Pages → Source: main branch
-4. Your site will be live at `https://YOUR_USERNAME.github.io/portfolio/`
+3. Go to Settings → Pages → Build and deployment → Source: **GitHub Actions**
+4. Push to `main` (or run the **Deploy static content to Pages** workflow manually)
+5. Your site will be live at `https://YOUR_USERNAME.github.io/portfolio/`
 
 ### Netlify
 1. Drag and drop your folder to [Netlify](https://app.netlify.com/drop)
